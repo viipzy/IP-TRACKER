@@ -16,42 +16,37 @@
 <h1>
   IP Address Tracker
 </h1>
-<div class="first" id="searchField">
-<input type="text" placeholder="192.212.174.101" id="search" name="number">
-  <label for="search">
+<form class="first" id="searchField">
+<input type="text" placeholder="Search for any IP or domain" id="search" name="number">
     <button>
-     <a href=""> 
-      <img src="./images/icon-arrow.svg" alt="arrow indicating search"> 
-    </a>
+      <img src="./images/icon-arrow.svg" alt="arrow indicating go">
     </button>  
-  </label>
-  </div>
 </main>
 
 <div class="pop-up">
 <h2> 
   IP Address
   <p id="ip">
-192.212.174.101
+<!-- 192.212.174.101 -->
   </p>
 </h2>
 <h2>
   Location
   <p id="location">
-Brooklyn, NY 10001
+<!-- Brooklyn, NY 10001 -->
   </p>
 </h2>
 <h2>
   Timezone
   <p id="timezone">
-     UTC -  05:00 
+     <!-- UTC -  05:00  -->
      <!-- add offset value dynamically using the API -->
     </p>
 </h2> 
 <h2>
   ISP
   <p id="isp">
-    SpaceX Starlink
+  <!--   SpaceX Starlink -->
   </p>
 </h2>
 </div>
@@ -61,8 +56,9 @@ Brooklyn, NY 10001
 
 </div>  
    
- 
-<script src="script.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js">
+</script>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

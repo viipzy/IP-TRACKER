@@ -19,7 +19,7 @@ main {
   color: white;
 }
 
-.first {
+form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,8 @@ button {
   background-color: rgb(253, 252, 250);
   padding: 2em 7.5em;
   margin: 0 4em;
+  width: 50%;
+  max-width: 500px;
   border-radius: 20px;
   color: hsl(0, 0%, 58%);
   font-size: 0.5em;
@@ -62,7 +64,8 @@ button {
   position: absolute;
   z-index: 2;
   top: 25em;
-  left: 0.5em;
+  left: auto;
+  right: auto;
 }
 .pop-up h2 {
   text-transform: uppercase;
