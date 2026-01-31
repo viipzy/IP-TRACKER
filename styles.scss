@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$Gray-950: hsl(0, 0%, 17%);
+$Gray-400: hsl(0, 0%, 58%);
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "rubik", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1em;
+
+}
+
+
+main{
+    height: 30vh;
+    padding: 2em ;
+    background: url(./images/pattern-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+    color: white;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+}
+input{
+    width:75%;
+    max-width: 500px;
+    border: 0;
+    border-radius: 10px 0px 0px 10px;
+    font-family: 'rubik';
+    font-size: 1em;
+    padding: 1em;
+    margin: 0;
+    cursor: pointer;
+}
+
+input:focus{
+    border:0;
+}
+button{
+    margin: 0px;
+    padding: 1.3em 1.5em;
+    border-radius: 0 10px 10px 0;
+    background-color: $Gray-950;
+    border:0;
+    cursor: pointer;
+}
+
+
+.pop-up{
+    background-color:rgb(253, 252, 250);
+    padding:2em 7.5em;
+    margin: 0 4em;
+    border-radius: 20px;
+    color: $Gray-400;
+    font-size: 0.5em;
+    box-shadow: 0 1px 5px rgba($color: #e3e1e1, $alpha: 1.0);
+    position:absolute;
+    z-index: 2;
+    top: 25em;
+    left: 0.5em;
+   
+    
+
+    & h2{
+        text-transform: uppercase;
+    }
+
+    & p{
+        font-size:1.6em;
+        font-weight: 600;
+        padding: 0;
+        margin: 0.3em;
+        color:rgb(49, 48, 48);
+        text-transform: capitalize;
+    }
+}
+
+
+.map{
+    height: 70vh;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+/* <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> */

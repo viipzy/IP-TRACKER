@@ -2,33 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="styles.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-location.svg">
   
   <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ 
+  
 </head>
 <body>
-
+<main class="header">
+<h1>
   IP Address Tracker
+</h1>
+<div class="first" id="searchField">
+<input type="text" placeholder="192.212.174.101" id="search" name="number">
+  <label for="search">
+    <button>
+     <a href=""> 
+      <img src="./images/icon-arrow.svg" alt="arrow indicating search"> 
+    </a>
+    </button>  
+  </label>
+  </div>
+</main>
 
-  Search for any IP address or domain
-
+<div class="pop-up">
+<h2> 
   IP Address
+  <p id="ip">
+192.212.174.101
+  </p>
+</h2>
+<h2>
   Location
+  <p id="location">
+Brooklyn, NY 10001
+  </p>
+</h2>
+<h2>
   Timezone
-    UTC <!-- add offset value dynamically using the API -->
+  <p id="timezone">
+     UTC -  05:00 
+     <!-- add offset value dynamically using the API -->
+    </p>
+</h2> 
+<h2>
   ISP
-  
-  <div class="attribution">
+  <p id="isp">
+    SpaceX Starlink
+  </p>
+</h2>
+</div>
+
+
+<div class="map">
+
+</div>  
+   
+ 
+<script src="script.js"></script>
+
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
