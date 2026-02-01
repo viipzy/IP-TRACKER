@@ -43,9 +43,9 @@ async function getIPData(query = "") {
 
   if (query) {
     if (/^\d{1,3}(\.\d{1,3}){3}$/.test(query)) {
-      url += `&ipAddress=${query}`; // real IP
+      url += `&ipAddress=${query}`; 
     } else {
-      url += `&domain=${query}`; // real domain
+      url += `&domain=${query}`; 
     }
   }
 
