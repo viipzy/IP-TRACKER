@@ -126,7 +126,7 @@ button{
       text-align: center;
       margin-top: -15em;
       max-width: 1440px;
-      width: 200em;
+      width: 100em;
       align-items: center;
       
       padding: 2em auto;
@@ -137,10 +137,10 @@ button{
       }
 
       & .details{
-      /*   border-right: 2px solid rgba(224, 219, 219 0.5); */
+        border-right: 2px solid rgba(224, 219, 219 0.3);
         text-align: left;
         padding:0;
-        /* border: 2px solid red; */
+        
        
       }
 
