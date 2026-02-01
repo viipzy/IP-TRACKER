@@ -118,9 +118,11 @@ button {
   .pop-up .details {
     border-right: 2px solid rgb(224, 219, 219);
     text-align: left;
+    padding: 0;
   }
   .pop-up .detail {
     text-align: left;
+    padding: none;
   }
   #map {
     margin-top: -5em;
