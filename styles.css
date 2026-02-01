@@ -109,6 +109,18 @@ button {
     text-align: center;
     margin-top: -15em;
     width: 90em;
+    padding: 1.5em auto;
+  }
+  .pop-up p {
+    margin: 0;
+    padding: 0;
+  }
+  .pop-up .details {
+    border-right: 2px solid rgb(224, 219, 219);
+    text-align: left;
+  }
+  .pop-up .detail {
+    text-align: left;
   }
   #map {
     margin-top: -5em;
