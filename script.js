@@ -49,7 +49,7 @@ async function getIPData(query = "") {
     }
   }
 
-  const res = await fetch(url);
+  const res = await fetch(`/api/ip?query=${query}`);
 
   if (!res.ok) {
     console.error("API error:", await res.text());
