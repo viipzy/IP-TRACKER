@@ -63,7 +63,7 @@ button {
   margin: -11em auto 2em;
   width: 70%;
   max-width: 900px;
-  border-radius: 20px;
+  border-radius: 10px;
   color: hsl(0, 0%, 58%);
   font-size: 0.5em;
   box-shadow: 0 1px 5px rgb(227, 225, 225);
@@ -108,17 +108,20 @@ button {
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
     margin-top: -15em;
-    width: 120em;
-    padding: 1.5em auto;
+    max-width: 1440px;
+    width: 200em;
+    align-items: center;
+    padding: 2em auto;
   }
   .pop-up p {
     margin: 0;
     padding: 0;
   }
   .pop-up .details {
-    border-right: 2px solid rgb(224, 219, 219);
+    /*   border-right: 2px solid rgba(224, 219, 219 0.5); */
     text-align: left;
     padding: 0;
+    /* border: 2px solid red; */
   }
   .pop-up .detail {
     text-align: left;
