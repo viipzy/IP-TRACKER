@@ -17,6 +17,7 @@ body{
 main{
     height: 30vh;
     padding: 2em ;
+    position: relative;
     background: url(./images/pattern-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,11 +30,12 @@ form{
     align-items: center;
     justify-content: center;
     max-width: 500px;
+    margin: auto;
 }
 input{
     width:75%;
     max-width: 500px;
-    border: 0;
+    border: NONE;
     border-radius: 10px 0px 0px 10px;
     font-family: 'rubik';
     font-size: 1em;
@@ -43,7 +45,7 @@ input{
 }
 
 input:focus{
-    border:0;
+    border:none;
 }
 button{
     margin: 0px;
@@ -56,61 +58,60 @@ button{
 }
 
 
-.pop-up{
-    background-color:rgb(253, 252, 250);
-    padding:2em 7.5em;
-    margin: 0 4em;
-    width: 50%;
-    max-width:500px;
-    border-radius: 20px;
-    color: $Gray-400;
-    font-size: 0.5em;
-    box-shadow: 0 1px 5px rgba($color: #e3e1e1, $alpha: 1.0);
-    position:absolute;
-    z-index: 2;
-    top: 25em;
-    left: auto;
-    right: auto;
-   
-    
 
+    
+    .pop-up{
+        background-color: rgb(253, 252, 250);
+        padding:2em;
+        margin: -9em auto 2em;   
+        width: 70%;
+        max-width: 900px;
+        border-radius: 20px;
+        color: $Gray-400;
+        font-size: 0.5em;
+        box-shadow: 0 1px 5px rgba(227, 225, 225, 1);
+        position: relative;     
+        z-index: 20;
+        display: grid;
+        gap: 1em;
+      
     & h2{
         text-transform: uppercase;
+
     }
 
     & p{
-        font-size:1.6em;
+        font-size:2em;
         font-weight: 600;
         padding: 0;
-        margin: 0.3em;
+        margin: 0.1em;
         color:rgb(49, 48, 48);
         text-transform: capitalize;
     }
 }
 
 
-.map{
+
+#map{
     height: 70vh;
-}
+    position: relative;
+    z-index: 1;
+    margin-top: -23em;
+  }
+  
+  .leaflet-container{
+    z-index: 0 !important;
+  }
+
+  @media (min-width: 768px){
+    .pop-up{
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
 
 
+    }
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-/* <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> */
+    #map{
+        margin-top:-8em;
+    }
+  }
