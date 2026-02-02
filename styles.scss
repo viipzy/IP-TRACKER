@@ -61,9 +61,7 @@ button{
 
 }
 
-
-
-    
+   
 .pop-up{
         background-color: rgb(253, 252, 250);
         padding:2em;
@@ -109,7 +107,9 @@ button{
 
   @media (min-width: 425px){
     .pop-up{
-        width:40%;
+        width:60%;
+        margin: -13em auto 2em;
+
     }
   }
 
@@ -146,9 +146,8 @@ button{
     
       & .detail{
         text-align: left;
-       /*  padding:0 0 0 5px;;
-        border-left: 2px solid rgb(209, 205, 205);
- */
+     
+ 
       }
 
 
