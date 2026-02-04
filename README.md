@@ -1,32 +1,28 @@
-# Frontend Mentor - IP address tracker
+# IP Address Tracker Web Application
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This project is a real-world IP address tracking web application that allows users to search for any IP address or domain and view detailed geolocation information in an interactive map interface.
 
+It consumes a third-party IP geolocation API, visualizes location data using LeafletJS, and securely proxies API requests through Vercel serverless functions to protect sensitive API keys in production.
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
+The application automatically detects the user’s IP address on initial load and displays key information such as location, ISP, timezone, and coordinates on a map. Users can also search for any valid IP address or domain and instantly see updated results.
 
-### The challenge
+This project demonstrates practical frontend development skills beyond layout, including API consumption, map integration, error handling, and secure deployment practices.
 
-Users should be able to:
+### Features
 
-* View the optimal layout for each page depending on their device’s screen size
-* See hover states for all interactive elements
-* See their own IP address on the map on the initial page load
-* Search for any IP addresses or domains and see the key information and location.
+* Detects and displays the user’s current IP address on page load
+
+* Searches any IP address or domain in real time
+
+* Displays geolocation data including ISP and timezone
+
+* Interactive map visualization with dynamic marker updates
+
+* Fully responsive layout across mobile and desktop devices
+
+* Secure API handling using serverless functions
 
 ### Screenshot
 
@@ -34,36 +30,29 @@ Users should be able to:
 ![Desktop screen](./screenshot/desktop.png)
 
 
-### Links
+### Live Demo and Source
 
 - Solution URL: [FrontEndMentor](https://www.frontendmentor.io/solutions/ip-address-tracker-lOdn_K94lm)
 - Live Site URL: [Vercel](https://ip-tracker-jet.vercel.app/)
 
-## My process
 
-### Built with
 
-* Semantic HTML5
-* CSS (Flexbox + Grid)
-* Mobile-first workflow
+### Tech Stacks
+
+* HTML5 (Semantic Markup)
+* CSS (Flexbox and Grid, mobile first workflow).
 * JavaScript
-* [LeafletJS](https://leafletjs.com/) – interactive maps
-* [IP Geolocation API by IPify](https://geo.ipify.org/) - IP Geolocation and API
-* [Vercel Serverless Functions](https://vercel.com/) – to hide API keys
+* LeafletJS interactive maps
+* IP Geolocation API by IPify
+* Vercel Serverless Functions for API key protection
 
----
 
-### What I learned
+### Implementation Notes
 
-This project taught me how to:
+To prevent exposing the API key on the client, all geolocation requests are routed through a serverless function deployed on Vercel. This backend proxy handles API communication securely and avoids common CORS and key-leak issues.
 
-* Work with third-party APIs and handle errors
-* Use Leaflet to display and update map markers dynamically
-* Secure API keys using a backend proxy with Vercel
-* Understand why serverless proxies return different IPs
-* Debug real-world issues like 403 errors and CORS
+The map updates dynamically by repositioning the marker and viewport whenever a new IP address or domain is searched.
 
-One part I’m proud of is dynamically moving the map marker:
 
 ```js
 map.setView([lat, lng], 13);
@@ -71,30 +60,34 @@ map.removeLayer(marker);
 marker = L.marker([lat, lng]).addTo(map);
 ```
 
----
 
-### Continued development
 
-In future projects, I want to:
+### What I Learned
 
-* Improve error handling and user feedback
-* Add loading states and animations
-* Learn more about backend security and rate limiting
-* Build more full-stack projects using serverless functions
+* Consuming and handling third-party APIs in real applications
 
----
+* Integrating and controlling interactive maps with LeafletJS
 
-### Useful resources
+* Using serverless functions to secure sensitive data
 
-* [https://leafletjs.com/](https://leafletjs.com/) – Map documentation
-* [https://geo.ipify.org/](https://geo.ipify.org/) – IP Geolocation API
-* [https://vercel.com/docs/functions](https://vercel.com/docs/functions) – Vercel serverless guide
-* [https://developer.mozilla.org/](https://developer.mozilla.org/) – For fetch and async/await
+* Debugging real-world issues such as CORS errors and 403 responses
 
----
+* Managing asynchronous data flow and UI updates
+
+### Future Improvements
+
+* Improved error handling and user feedback states
+
+* Loading indicators and subtle UI animations
+
+* Rate limiting and deeper backend security exploration
+
+* Expansion into more full-stack, serverless-based projects
+
 
 ## Author
 
-* Name: **Awosanya Ifeoluwa (Vipzy)**
-* Frontend Mentor: [https://www.frontendmentor.io/profile/viipzy](https://www.frontendmentor.io/profile/viipzy)
+**Awosanya Ifeoluwa (Vipzy)**
 * GitHub: [https://github.com/viipzy](https://github.com/viipzy)
+* Frontend Mentor: [https://www.frontendmentor.io/profile/viipzy](https://www.frontendmentor.io/profile/viipzy)
+
